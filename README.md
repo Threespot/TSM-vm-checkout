@@ -1,6 +1,6 @@
 #Virtual Machine Checkout
 
-Small productivity app for tracking the usage status of shared virtual machines. To prevent usage conflicts, a developer may open the VMCheckout app, select an available VM from the list, and sign it out in their name. When finished, they may release their claim. All checkouts are reset each night at midnight.
+Small productivity app for tracking the usage status of shared virtual machines. To prevent usage conflicts, developers may sign out available VMs in their name, and then release their claims when finished. All checkouts are reset each night at midnight.
 
 ##Versions
 
