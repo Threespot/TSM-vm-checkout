@@ -1,0 +1,197 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: black;
+}
+ol, ul {
+  list-style: none;
+}
+a img {
+  border: none;
+}
+a {
+	color:#666;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+body {
+	background:#333 url(../images/grille.png) repeat;
+	font:10px/1.5em Arial, Helvetica, sans-serif;
+}
+#vm-app {
+	background-color:#fff;
+	border:1px solid #000;
+	border-radius:10px;
+	box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+	margin:25px auto;
+	position:relative;
+	width:450px;
+}
+
+/* Header elements */
+#vm-app .header {
+	background:url(../images/vmicon-64.png) no-repeat;
+	margin:10px 10px;
+	min-height:64px;
+	padding:0 0 0 75px;
+}
+#vm-app .header h1 {
+	font:bold 24px/1.3em Arial,sans-serif;
+	margin:10px 0 5px;
+}
+#vm-app .header p {
+	color:#666;
+	font-size:14px;
+	font-weight:bold;
+}
+#vm-app #sync {
+	background:url(../images/sync.png) no-repeat;
+	border:none;
+	color:#999;
+	cursor:pointer;
+	font-size:9px;
+	padding-top:26px;
+	position:absolute;
+	right:10px;
+	text-align:center;
+	text-indent:-2px;
+	top:10px;
+	width:25px;
+	z-index:1;
+}
+#vm-app #sync.on {
+	background-position:right 0;
+}
+#vm-app #sync-info {
+	background-color:rgba(0,0,0,0.75);
+	border:1px solid #000;
+	border-radius:5px;
+	color:#fff;
+	display:none;
+	font-size:12px;
+	font-weight:bold;
+	right:-30px;
+	padding:2px 0;
+	position:absolute;
+	text-align:center;
+	top:-15px;
+	width:110px;
+	z-index:2;
+}
+
+/* List elements */
+#vm-app ul {
+	border-top:1px solid #ccc;
+	min-height:530px;
+}
+#vm-app li {
+	background:url(../images/led.png) no-repeat 10px top;
+	border-bottom:1px solid #ccc;
+	display:none;
+	font-size:14px;
+	height:20px;
+	line-height:20px;
+	padding:10px 0 10px 38px;
+	position:relative;
+}
+#vm-app li.busy {
+	background-position:10px bottom;
+}
+#vm-app li.alt {
+	background-color:#eee;
+}
+#vm-app li div {
+	color:#666;
+	float:left;
+}
+#vm-app li .vm-name {
+	color:#000;
+	font-weight:bold;
+	width:150px;
+}
+#vm-app li input {
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-shadow:0 1px 4px rgba(0,0,0,0.15);
+	padding:2px 5px;
+	position:relative;
+	top:-1px;
+	width:163px;
+}
+#vm-app li em {
+	font-size:11px;
+	font-style:italic;
+}
+#vm-app li button {
+	width:50px;
+}
+
+/* Toggle open/busy field views based on slot status */
+#vm-app .busy .vm-busy,
+#vm-app .vm-open {
+	display:block;
+	margin-right:14px;
+	width:175px;
+}
+#vm-app .busy .vm-open,
+#vm-app .vm-busy {
+	display:none;
+}
+
+/* Footer elements */
+#vm-app p.footer {
+	padding:10px;
+}
+
+/* Alert message elements */
+#vm-alert {
+	background-color:rgba(0,0,0,0.75);
+	display:none;
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:9;
+}
+#vm-alert .message {
+	background-color:#fff;
+	border:1px solid #000;
+	border-radius:10px;
+	box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+	color:#777;
+	font-size:15px;
+	line-height:1.35em;
+	margin:200px auto 0;
+	padding:20px;
+	width:300px;
+}
+#vm-alert .message h2 {
+	color:#000;
+	font:22px/1.4em Helvetica, Arial, sans-serif;
+	margin:0 0 5px;
+}
+#vm-alert .message button {
+	display:block;
+	margin:15px auto 0;
+	width:75px;
+}

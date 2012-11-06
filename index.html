@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Virtual Machine Checkout</title>
+	<link rel="stylesheet" href="css/vm.css" type="text/css"/>
+</head>
+<body>
+	
+	<div id="vm-app">
+		<div class="header">
+			<h1>Virtual Machine Checkout</h1>
+			<p>All checkouts are reset at midnight.</p>
+			<span id="sync-info">60-second sync</span>
+			<button id="sync" data-bind="css:{on:sync}, text:syncLabel, click:toggleSync"></button>
+		</div>
+		<ul data-bind="foreach:vmList">
+			<li data-bind="css:{alt:index % 2, busy:isBusy}, style:{display:'block'}">
+				<div class="vm-name" data-bind="text:vm"></div>
+				<div class="vm-open">
+					<input type="text" data-bind="value:user, event:{keydown:keySubmit}"/>
+				</div>
+				<div class="vm-busy">
+					<a data-bind="text:user, attr:{href:disputeLink}"></a> <em data-bind="text:timestampLabel"></em>
+				</div>
+				<button data-bind="text:actionLabel, click:toggle"></button>
+			</li>
+		</ul>
+		<p class="footer">Please refresh before claiming a machine. Resolve disputes <a href="disputes.html">here</a>.</p>
+	</div>
+	
+	<div id="vm-alert">
+		<div class="message">
+			<h2>Dangit...</h2>
+			<p>You were out of sync! Your VM has already been claimed by <span class="user"></span> (sorry, they've got dibbs). Please pick another VM.</p>
+			<button>OK</button>
+		</div>
+	</div>
+	
+	<script src="js/zepto.min.js"></script>
+    <script src="js/knockout.min.js"></script>
+	<script src="js/vm.js"></script>
+</body>
+</html>

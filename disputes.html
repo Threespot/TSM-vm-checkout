@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VM Dispute Resolution</title>
+	<link rel="stylesheet" href="css/disputes.css" type="text/css"/>
+</head>
+<body>
+	<h1>Dispute Resolution</h1>
+	<div id="dispute">
+		<div id="punch"></div>
+		<input type="text" value=""/>
+		<p>(click Mike for resolution)</p>
+	</div>
+	<a href="index.html" class="done">&laquo; done</a>
+	
+	<script src="js/zepto.min.js"></script>
+    <script>
+	$(function() {
+		var api = document.location.toString().split('?offender=');
+		
+		if (api.length > 1) {
+			$('input').val( decodeURIComponent(api.pop()).split('+').join(' ') );
+		} else {
+			$('input').val("offender's name");
+		}
+		
+		$('#punch').on('mousedown', function() {
+			$(this).css('background-position', '0 -382px');
+		}).on('mouseup', function() {
+			$(this).css('background-position', '0 0');
+		});
+	});
+	</script>
+</body>
+</html>

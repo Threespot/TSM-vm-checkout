@@ -1,0 +1,39 @@
+body {
+	background:#333 url(../images/grille.png) repeat;
+	color:#888;
+	font:14px arial,helvetica,sans-serif;
+	text-align:center;
+	margin:0;
+}
+h1 {
+	font-size:24px;
+}
+#dispute {
+	position:relative;
+	height:382px;
+	margin:25px auto;
+	width:517px;
+}
+#punch {
+	background:url(../images/punch.png) repeat;
+	border:1px solid #000;
+	border-radius:20px;
+	box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+	height:100%;
+	width:100%;
+}
+#dispute input {
+	font-size:18px;
+	left:150px;
+	position:absolute;
+	text-align:center;
+	top:300px;
+	width:217px;
+}
+.done {
+	color:#666;
+	left:14px;
+	position:absolute;
+	text-decoration:none;
+	bottom:14px;
+}
