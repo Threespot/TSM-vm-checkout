@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title>VM Checkout MVC</title>
+	<link rel="stylesheet" href="css/vm.css"/>
+	<link rel="stylesheet" href="css/vm-index.css"/>
+</head>
+<body>
+	
+<div id="page">
+	<div id="matrix">
+		<h1>VM Checkout MVC</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>VM Demo</th>
+					<th>Hard dependencies</th>
+					<th>Views using:</th>
+					<th>Ajax using:</th>
+					<th>View binding</th>
+					<th>Package size</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="angular.html" class="vm">Angular</a></td>
+					<td>(none)</td>
+					<td>(native)</td>
+					<td>(native)</td>
+					<td>(native)</td>
+					<td>77kb</td>
+				</tr>
+				<tr>
+					<td><a href="backbone.html" class="vm">Backbone</a></td>
+					<td>jQuery<sup>1</sup>, Underscore</td>
+					<td>Underscore Template</td>
+					<td>(native)</td>
+					<td>Re-render<sup>3</sup></td>
+					<td data-split="[16,35,95]">146kb</td>
+				</tr>
+				<tr>
+					<td><a href="ember.html" class="vm">Ember</a></td>
+					<td>jQuery</td>
+					<td>Handlebars<sup>2</sup> Template</td>
+					<td>jQuery</td>
+					<td>(native)</td>
+					<td data-split="[148,95]">243kb</td>
+				</tr>
+				<tr>
+					<td><a href="knockout.html" class="vm">Knockout</a></td>
+					<td>(none)</td>
+					<td>(native)</td>
+					<td>Zepto</td>
+					<td>(native)</td>
+					<td data-split="[40,24]">64kb</td>
+				</tr>
+				<tr>
+					<td><a href="spine.html" class="vm">Spine</a></td>
+					<td>jQuery<sup>1</sup></td>
+					<td>jQuery Template</td>
+					<td>(native)</td>
+					<td>Re-render<sup>3</sup></td>
+					<td data-split="[11.5,8.5,95,6]">121kb</td>
+				</tr>
+			</tbody>
+		</table>
+	
+		<ul class="footnotes">
+			<li><sup>1</sup> Officially permits Zepto in place of jQuery; however, some features fail with it.</li>
+			<li><sup>2</sup> Handlebars comes packaged with Ember, so does not require a separate include or allow alternatives.</li>
+			<li><sup>3</sup> "Re-render" refers to throwing away dirty DOM and rebuilding from template, versus updating existing view nodes.</li>
+		</ul>
+	</div>
+	
+	<div id="commentary">
+		<h1>Commentary</h1>
+		
+		<h2>Angular</h2>
+		<ul>
+			<li>Meticulous MVC pattern with focus on automation. Models auto-generate, views auto-bind, controllers are minimalist.</li>
+			<li>Bigger and more enterprise-feeling framework. Lots of docs to read through, making it slower to start with.</li>
+			<li>Seems to do a stupid amount of view processing. All view bindings update with every model change?</li>
+			<li>Self-contained; includes everything from DOM management to Ajax services and routing.</li>
+		</ul>
+		
+		<h2>Backbone</h2>
+		<ul>
+			<li>Features an elegant model system with native REST services and built-in routing.</li>
+			<li>Small framework with clean and concise documentation. Fast to look over and start using.</li>
+			<li>Odd MV* pattern. Provides Model, Collection, and View, with amorphous relationship between components. Bad or good?.</li>
+			<li>Brute-force approach to views: regenerates dirty DOM from script templates.</li>
+			<li>Feels cluttered with dependencies.</li>
+		</ul>
+		
+		<h2>Ember</h2>
+		<ul>
+			<li>Enterprise-level framework that tries to do everything, and turns into a mess.</li>
+			<li>Larger framework, or so it seems it with its long-winded and obtuse documentation. Slow to start with.</li>
+			<li>Attempts to solve a lot of the same problems as Angular and Knockout, but with less elegance.</li>
+			<li>BUTT-UGLY data binding. Renders script templates that will kick puppy dogs and make your mother cry.</li>
+			<li>Bulky framework who's features don't match its girth IMHO: 140kb + jQuery?</li>
+		</ul>
+		
+		<h2>Knockout</h2>
+		<ul>
+			<li>Features a simple declarative data binding system for controlling complex views.</li>
+			<li>Framework is small and simple, yet packs some serious black magic features. Interactive tutorials provide a quick start.</li>
+			<li>Doesn't provide much beyond view controllers. Write your own data services.</li>
+			<li>Great for small, view-heavy apps with modest data requirements.</li>
+			<li>Light-weight, no dependencies, and fun to use. Definitely "knocks stuff out" quickly.</li>
+		</ul>
+		
+		<h2>Spine</h2>
+		<ul>
+			<li>Very similar to Backbone. Great model system, native REST and routing.</li>
+			<li>Nice simplification of Models and Controllers from Backbone. Much more concise component relationships.</li>
+			<li>Documentation is long-winded in a mix of JS and CoffeeScript. Not as clean and easy to pick up as Backbone.</li>
+			<li>Takes the same brute-force approach for regenerating dirty views from template as Backbone.</li>
+			<li>Fragmented into components, making it potentially lighter, but more confusing to configure.</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

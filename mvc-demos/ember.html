@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VM Checkout: Ember</title>
+	<link rel="stylesheet" href="css/vm.css" type="text/css"/>
+</head>
+<body>
+	
+	<div id="vm-app">
+		<div class="header">
+			<h1>Virtual Machine Checkout</h1>
+			<p>All checkouts are reset at midnight.</p>
+		</div>
+		<ul id="vm-list">
+		<script type="text/x-handlebars">
+			{{#each VMCheckout.vmList}}
+			<li {{bindAttr class="isBusy:busy isAlt:alt"}}>
+				<div class="vm-name">{{vm}}</div>
+				<div class="vm-claim">
+					<span class="vm-open">
+						{{view Ember.TextField valueBinding="user" viewName="textField"}}
+					</span>
+					<span class="vm-busy">
+						<a href="#">{{user}}</a> <em>{{timestampLabel}}</em>
+					</span>
+					<button {{action "toggle" target="VMCheckout.vmList"}}>{{actionLabel}}</button>
+				</div>
+			</li>
+			{{/each}}
+		</script>
+		</ul>
+		<p class="footer">Please refresh before claiming a machine.</p>
+	</div>
+	
+	<script src="js/jquery-1.7.1.js"></script>
+    <script src="js/ember.min.js"></script>
+	<script src="js/vm-utils.js"></script>
+	<script src="js/vm-ember.js"></script>
+</body>
+</html>

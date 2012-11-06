@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VM Checkout: Spine</title>
+	<link rel="stylesheet" href="css/vm.css" type="text/css"/>
+</head>
+<body>
+	
+	<div id="vm-app">
+		<div class="header">
+			<h1>Virtual Machine Checkout</h1>
+			<p>All checkouts are reset at midnight.</p>
+		</div>
+		<ul id="vm-list"></ul>
+		<p class="footer">Please refresh before claiming a machine.</p>
+	</div>
+	
+	<script type="text/x-jquery-tmpl" id="vm-tmpl">
+		<li data-id="{{= id }}" class="{{= $data.isBusy() ? 'busy' : '' }} {{= $data.isOdd() ? 'alt' : '' }}">
+			<div class="vm-name">{{= vm }}</div>
+			<div class="vm-claim">
+				<span class="vm-open">
+					<input type="text" value="{{= user }}"/>
+				</span>
+				<span class="vm-busy">
+					<a href="#">{{= user }}</a> <em>{{= $data.timestampLabel() }}</em>
+				</span>
+				<button>{{= $data.isBusy() ? 'Vacate' : 'Claim' }}</button>
+			</div>
+		</li>
+	</script>
+	
+	<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+    <script src="js/spine/spine.js"></script>
+	<script src="js/spine/ajax.js"></script>
+	<script src="js/vm-utils.js"></script>
+	<script src="js/vm-spine.js"></script>
+</body>
+</html>

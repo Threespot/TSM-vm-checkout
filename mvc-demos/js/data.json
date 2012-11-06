@@ -1,0 +1,15 @@
+[
+	{"id":"1","vm":"XP-SP3-IE6","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"2","vm":"XP-SP3-IE6-1","user":"Greg","checkout":"2000-00-00 00:00:00", "busy":false},
+	{"id":"3","vm":"XP-SP3-IE6-2","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"4","vm":"XP-SP3-IE7","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"5","vm":"XP-SP3-IE7-1","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"6","vm":"XP-SP3-IE7-2","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"7","vm":"XP-SP3-IE8","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"8","vm":"XP-SP3-IE8-1","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"9","vm":"XP-SP3-IE8-2","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"10","vm":"WIN7-SP2-IE8","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"11","vm":"WIN7-SP2-IE8-1","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"12","vm":"WIN7-SP2-IE9","user":"","checkout":"0000-00-00 00:00:00", "busy":false},
+	{"id":"13","vm":"WIN7-SP2-IE9-1","user":"","checkout":"0000-00-00 00:00:00", "busy":false}
+]

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<title>VM Checkout: Angular</title>
+	<link rel="stylesheet" href="css/vm.css" type="text/css"/>
+</head>
+<body>
+	
+	<div id="vm-app" ng-controller="VMCheckout">
+		<div class="header">
+			<h1>Virtual Machine Checkout</h1>
+			<p>All checkouts are reset at midnight.</p>
+		</div>
+		<ul id="vm-list">
+			<li ng-repeat="vm in vmList" class="{{altClass(vm)}} {{busyClass(vm)}}">
+				<div class="vm-name">{{vm.vm}}</div>
+				<div class="vm-claim">
+					<span class="vm-open">
+						<input type="text" ng-model="vm.user"/>
+					</span>
+					<span class="vm-busy">
+						<a href="#">{{vm.user}}</a> <em>{{timestampLabel(vm)}}</em>
+					</span>
+					<button ng-click="toggle(vm)">{{actionLabel(vm)}}</button>
+				</div>
+			</li>
+		</ul>
+		<p class="footer">Please refresh before claiming a machine.</p>
+	</div>
+	
+	<script src="js/angular-1.0.0rc10.min.js"></script>
+	<script src="js/vm-utils.js"></script>
+	<script src="js/vm-angular.js"></script>
+</body>
+</html>

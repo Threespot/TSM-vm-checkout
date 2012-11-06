@@ -1,0 +1,71 @@
+#page {
+	margin:50px auto;
+	width:800px;
+}
+#matrix h1 {
+	color:#fff;
+	font-size:25px;
+	margin:0 0 25px;
+}
+table {
+	background-color:#fff;
+	font-size:13px;
+	width:100%;
+}
+table a {
+	color:#333;
+}
+table a.vm {
+	color:#C33;
+	font-weight:bold;
+}
+thead {
+	background-color:#333;
+	color:#fff;
+	text-align:left;
+}
+th, td {
+	padding:10px 5px;
+}
+tbody tr:nth-child(odd) {
+	background-color:#ececec;
+}
+
+sup {
+	font-size:70%;
+	left:0.15em;
+	position:relative;
+	top:-0.6em;
+}
+sup:before { content:'['; }
+sup:after { content:']'; }
+
+ul.footnotes {
+	color:#fff;
+	font-size:11px;
+	line-height:18px;
+	margin:25px 0 0;
+}
+ul.footnotes sup {
+	left:0;
+	top:-0.3em;
+}
+
+#commentary {
+	background-color:#fff;
+	color:#000;
+	margin:50px 0;
+	padding:25px;
+}
+#commentary h1 {
+	font-size:24px;
+}
+#commentary h2 {
+	font-size:18px;
+	margin:25px 0 15px;
+}
+#commentary ul {
+	font-size:13px;
+	line-height:1.75em;
+	list-style:inside disc none;
+}
