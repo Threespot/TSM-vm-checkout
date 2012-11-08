@@ -12,7 +12,7 @@ Small productivity app for tracking the usage status of shared virtual machines.
 	- [Knockout.js](http://knockoutjs.com/ "Knockout.js")
 	- [Spine.js](http://spinejs.com/ "Spine.js")
 
-Knockout was selected for the production version for the convenience of its direct UI bindings.
+Knockout was selected for the production version due to its convenient direct-UI bindings. Full-featured production app polls the server for updates, verifies new claims with the server to avoid out-of-sync UI conflicts, and offers a handy dispute resolution tool.
 
 ##Installation
 
