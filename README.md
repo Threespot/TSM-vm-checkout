@@ -12,4 +12,13 @@ Small productivity app for tracking the usage status of shared virtual machines.
 	- [Knockout.js](http://knockoutjs.com/ "Knockout.js")
 	- [Spine.js](http://spinejs.com/ "Spine.js")
 
-Knockout's direct UI bindings are well suited for the graphics of this app, therefore it was selected for the production version.
+Knockout was selected for the production version for the convenience of its direct UI bindings.
+
+##Installation
+
+1. Import `prod/vm.sql` into a new MySQL. Application's default config:
+	- DB Name: "vmcheckout"
+	- User: "root"
+	- Password: "root"
+2. If you used the default application config, you should be up and running. Otherwise, adjust the database connection info at the top of `prod/vm.php`.
+

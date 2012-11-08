@@ -2,7 +2,7 @@
 * VM data service path.
 */
 var VM = {
-	dataPath: 'vm.php'
+	dataPath: '../prod/vm.php'
 };
 
 /**
