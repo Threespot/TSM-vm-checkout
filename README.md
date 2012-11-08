@@ -16,9 +16,9 @@ Knockout was selected for the production version for the convenience of its dire
 
 ##Installation
 
-1. Import `prod/vm.sql` into a new MySQL. Application's default config:
-	- DB Name: "vmcheckout"
-	- User: "root"
-	- Password: "root"
-2. If you used the default application config, you should be up and running. Otherwise, adjust the database connection info at the top of `prod/vm.php`.
+1. Import `prod/vm.sql` into a new MySQL database. Default app config:
+	- DB name: "vmcheckout"
+	- user: "root"
+	- pass: "root"
+2. You should be up and running if you used the default app config. Otherwise, adjust the database connection info at the top of `prod/vm.php`.
 
