@@ -117,7 +117,7 @@ body {
 	background-position:10px bottom;
 }
 #vm-app li.alt {
-	background-color:#eee;
+	background-color:#eee; /*#eceff4 - light blue*/
 }
 #vm-app li div {
 	color:#666;
@@ -142,8 +142,39 @@ body {
 	font-style:italic;
 }
 #vm-app li button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #9c9c9c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9c9c9c;
+	box-shadow:inset 0px 1px 0px 0px #9c9c9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #888888), color-stop(1, #444444) );
+	background:-moz-linear-gradient( center top, #888888 5%, #444444 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#888888', endColorstr='#444444');
+	background-color:#888888;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #666;
+	color:#d9fbbe;
+	display:inline-block;
+	font:bold 10px/1em arial, helvetica, sans-serif;
+	padding:4px 0;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #333;
 	width:50px;
 }
+#vm-app li button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #999), color-stop(1, #444) );
+	background:-moz-linear-gradient( center top, #999 5%, #444 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#999', endColorstr='#444');
+	background-color:#444;
+	border-color:#777;
+}
+#vm-app li button:active {
+	border-color:#444;
+}
+#vm-app li.busy button {
+	color:#f29d93;
+}
+
 
 /* Toggle open/busy field views based on slot status */
 #vm-app .busy .vm-busy,
