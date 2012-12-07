@@ -195,9 +195,7 @@ $(function() {
 	var VMList = function() {
 		var self = this,
 			reset = '?reset=1',
-			pending,
-			loadData,
-			parseData;
+			pending;
 		
 		// List of VMItems.
 		this.vmList = ko.observableArray([]);
@@ -207,7 +205,7 @@ $(function() {
 		}, this);
 		
 		// Parses loaded JSON data into the view model.
-		parseData = function(data) {
+		var parseData = function(data) {
 			if (self.vmList().length) {
 				// Load data into existing view model.
 				$.each(self.vmList(), function(index, item) {
@@ -217,15 +215,16 @@ $(function() {
 				// Build view model from new data.
 				data = $.map(data, function(item) { return new VMItem(item); });
 				self.vmList( data );
+				$('#vm-app li').show();
 			}
 			
 			if (self.sync()) {
-				pending = setTimeout(loadData, 1000 * 60);
+				pending = setTimeout(loadData, 1000 * 30);
 			}
 		};
 		
 		// Requests new data from the server.
-		loadData = function() {
+		var loadData = function() {
 			$.getJSON("vm.php"+reset, parseData);
 			reset = ''; // Only request data reset upon initial load.
 		};

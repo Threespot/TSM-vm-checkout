@@ -10,11 +10,11 @@
 		<div class="header">
 			<h1>Virtual Machine Checkout</h1>
 			<p>All checkouts are reset at midnight.</p>
-			<span id="sync-info">60-second sync</span>
+			<span id="sync-info">30-second sync</span>
 			<button id="sync" data-bind="css:{on:sync}, text:syncLabel, click:toggleSync"></button>
 		</div>
 		<ul data-bind="foreach:vmList">
-			<li data-bind="css:{alt:index % 2, busy:isBusy}, style:{display:'block'}">
+			<li data-bind="css:{alt:index % 2, busy:isBusy}">
 				<div class="vm-name" data-bind="text:vm"></div>
 				<div class="vm-open">
 					<input type="text" data-bind="value:user, event:{keydown:keySubmit}"/>
