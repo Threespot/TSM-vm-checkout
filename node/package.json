@@ -1,0 +1,14 @@
+{
+	"name": "vm-checkout",
+	"description": "A simple productivity app for managing the usage of virtual test machines.",
+	"version": "1.0.0",
+	"author": "Greg MacWilliam <greg.macwilliam@threespot.com>",
+	"engines": {
+		"node": "*"
+	},
+	"dependencies": {
+		"express": "2.5.9",
+		"mysql": "2.0.0-alpha2",
+		"socket.io": "0.9.6"
+	}
+}

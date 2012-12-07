@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VM Checkout (socket)</title>
+	<link rel="stylesheet" href="css/vm.css" type="text/css"/>
+</head>
+<body>
+	
+	<div id="vm-app">
+		<div class="header">
+			<h1>Virtual Machine Checkout</h1>
+			<p>All checkouts are reset at midnight.</p>
+		</div>
+		<ul id="vm-list" data-bind="foreach:vmList">
+			<li data-bind="css:{busy:isBusy, alt:index % 2}, style:{display:'block'}">
+				<div class="vm-name" data-bind="text:vm">VM Name</div>
+				<div class="vm-claim">
+					<span data-bind="visible:!isBusy()">
+						<input type="text" data-bind="value:user, returnKey:toggle"/>
+					</span>
+					<span data-bind="visible:isBusy()">
+						<a href="#" data-bind="text:user">User</a> <em data-bind="text:timestampLabel">Timestamp</em>
+					</span>
+					<button data-bind="text:actionLabel, click:toggle"></button>
+				</div>
+			</li>
+		</ul>
+		<p class="footer">Please refresh before claiming a machine.</p>
+	</div>
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/zepto.min.js"></script>
+    <script src="/js/knockout-2.0.0.js"></script>
+	<script src="/js/vm-utils.js"></script>
+	<script src="/js/vm-knockout-socket.js"></script>
+</body>
+</html>

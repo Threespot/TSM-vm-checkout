@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VM Checkout: Knockout</title>
+	<link rel="stylesheet" href="css/vm.css" type="text/css"/>
+</head>
+<body>
+	
+	<div id="vm-app">
+		<div class="header">
+			<h1>Virtual Machine Checkout</h1>
+			<p>All checkouts are reset at midnight.</p>
+		</div>
+		<ul id="vm-list" data-bind="foreach:vmList">
+			<li class="alt" style="display:block;">
+				<div class="vm-claim">
+					<a href="rest.html">Restful</a> <em>(requires REST server)</em>
+				</div>
+			</li>
+			<li class="alt" style="display:block;">
+				<div class="vm-claim">
+					<a href="socket.html">Socket</a> <em>(requires socket server)</em>
+				</div>
+			</li>
+		</ul>
+		<p class="footer">Please refresh before claiming a machine.</p>
+	</div>
+	
+</body>
+</html>
