@@ -5,6 +5,7 @@ Small productivity app for tracking the usage status of shared virtual machines.
 ##Versions
 
 - `prod/` : Full-featured production version of the VMCheckout app running on Threespot's app server. Built with [Knockout.js](http://knockoutjs.com/ "Knockout.js").
+- `node` : Experimental builds of the app running on Node.js with a REST sever and a socket server.
 - `mvc-demos/` : Demo builds of the basic app functionality, built using a variety of MV* frameworks. Includes:
 	- [Angular.js](http://angularjs.org/ "Angular.js")
 	- [Backbone.js](http://backbonejs.org/ "Backbone.js")
