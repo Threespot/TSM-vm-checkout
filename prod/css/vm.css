@@ -37,6 +37,7 @@ body {
 	background:#333 url(../images/grille.png) repeat;
 	font:10px/1.5em Arial, Helvetica, sans-serif;
 }
+
 #vm-app {
 	background-color:#fff;
 	border:1px solid #000;
@@ -54,15 +55,18 @@ body {
 	min-height:64px;
 	padding:0 0 0 75px;
 }
+
 #vm-app .header h1 {
 	font:bold 24px/1.3em Arial,sans-serif;
 	margin:10px 0 5px;
 }
+
 #vm-app .header p {
 	color:#666;
 	font-size:14px;
 	font-weight:bold;
 }
+
 #vm-app #sync {
 	background:url(../images/sync.png) no-repeat;
 	border:none;
@@ -78,9 +82,11 @@ body {
 	width:25px;
 	z-index:1;
 }
+
 #vm-app #sync.on {
 	background-position:right 0;
 }
+
 #vm-app #sync-info {
 	background-color:rgba(0,0,0,0.75);
 	border:1px solid #000;
@@ -103,6 +109,7 @@ body {
 	border-top:1px solid #ccc;
 	min-height:530px;
 }
+
 #vm-app li {
 	background:url(../images/led.png) no-repeat 10px top;
 	border-bottom:1px solid #ccc;
@@ -113,21 +120,26 @@ body {
 	padding:10px 0 10px 38px;
 	position:relative;
 }
+
 #vm-app li.busy {
 	background-position:10px bottom;
 }
+
 #vm-app li.alt {
 	background-color:#eee; /*#eceff4 - light blue*/
 }
+
 #vm-app li div {
 	color:#666;
 	float:left;
 }
+
 #vm-app li .vm-name {
 	color:#000;
 	font-weight:bold;
-	width:150px;
+	width:160px;
 }
+
 #vm-app li input {
 	border:1px solid #ccc;
 	border-radius:5px;
@@ -135,12 +147,14 @@ body {
 	padding:2px 5px;
 	position:relative;
 	top:-1px;
-	width:163px;
+	width:153px;
 }
+
 #vm-app li em {
 	font-size:11px;
 	font-style:italic;
 }
+
 #vm-app li button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #9c9c9c;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #9c9c9c;
@@ -161,6 +175,7 @@ body {
 	text-shadow:1px 1px 0px #333;
 	width:50px;
 }
+
 #vm-app li button:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #999), color-stop(1, #444) );
 	background:-moz-linear-gradient( center top, #999 5%, #444 100% );
@@ -168,9 +183,11 @@ body {
 	background-color:#444;
 	border-color:#777;
 }
+
 #vm-app li button:active {
 	border-color:#444;
 }
+
 #vm-app li.busy button {
 	color:#f29d93;
 }
@@ -183,6 +200,7 @@ body {
 	margin-right:14px;
 	width:175px;
 }
+
 #vm-app .busy .vm-open,
 #vm-app .vm-busy {
 	display:none;
@@ -204,6 +222,7 @@ body {
 	width:100%;
 	z-index:9;
 }
+
 #vm-alert .message {
 	background-color:#fff;
 	border:1px solid #000;
@@ -216,11 +235,13 @@ body {
 	padding:20px;
 	width:300px;
 }
+
 #vm-alert .message h2 {
 	color:#000;
 	font:22px/1.4em Helvetica, Arial, sans-serif;
 	margin:0 0 5px;
 }
+
 #vm-alert .message button {
 	display:block;
 	margin:15px auto 0;
